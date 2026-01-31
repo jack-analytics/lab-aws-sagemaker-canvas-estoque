@@ -1,72 +1,121 @@
-# Previsão de Estoque Inteligente com AWS SageMaker Canvas
+# 📦 Previsão de Estoque Inteligente com AWS SageMaker Canvas
 
-## 📌 Descrição do Projeto
-Este projeto foi desenvolvido como parte do desafio da Digital Innovation One (DIO), com o objetivo de aplicar conceitos de Machine Learning no-code utilizando o **Amazon SageMaker Canvas** para realizar **previsões inteligentes de estoque**.
+## 📌 Visão Geral
+Este projeto faz parte do desafio prático da **Digital Innovation One (DIO)** e tem como objetivo demonstrar a aplicação de **Machine Learning no-code** utilizando o **Amazon SageMaker Canvas** para a **previsão inteligente de estoque**, apoiando a tomada de decisão em cenários reais de negócios.
 
-O foco do projeto é demonstrar o processo de criação, treinamento, análise e geração de previsões de um modelo de Machine Learning, além da correta documentação do fluxo de trabalho em um repositório GitHub.
-
----
-
-## 🎯 Objetivo
-Criar um modelo de Machine Learning capaz de prever demandas de estoque a partir de dados históricos, utilizando o SageMaker Canvas, sem necessidade de programação.
+O projeto foi estruturado com foco em **clareza de processo**, **análise de dados** e **interpretação de resultados**, priorizando boas práticas de documentação para fins de portfólio profissional.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
-- Amazon AWS
-- Amazon SageMaker Canvas
-- GitHub
-- Dataset em formato CSV
+## 🎯 Objetivo do Projeto
+Desenvolver um modelo de Machine Learning capaz de:
+- Analisar dados históricos de estoque
+- Identificar padrões de consumo e demanda
+- Gerar previsões futuras de estoque
+- Apoiar decisões estratégicas como reposição, redução de perdas e planejamento logístico
+
+Tudo isso utilizando o **Amazon SageMaker Canvas**, sem necessidade de programação.
 
 ---
 
-## 📂 Dataset
-O dataset utilizado encontra-se na pasta `datasets` deste repositório, conforme disponibilizado pela DIO.  
-Os dados representam informações históricas relacionadas a estoque e demanda, utilizadas para o treinamento do modelo preditivo.
+## 🛠️ Tecnologias e Ferramentas
+- **Amazon Web Services (AWS)**
+- **Amazon SageMaker Canvas**
+- **Machine Learning No-Code**
+- **GitHub para versionamento e documentação**
+- **Dataset em formato CSV**
 
-Etapas realizadas:
-- Seleção do dataset
-- Upload do arquivo CSV no SageMaker Canvas
-- Validação automática dos dados pela plataforma
+---
+
+## 📂 Dataset Utilizado
+O dataset utilizado está disponível na pasta `datasets` deste repositório, conforme fornecido no repositório base da DIO.
+
+### Características gerais dos dados:
+- Dados históricos de estoque
+- Informações relacionadas à demanda e movimentação de produtos
+- Estrutura compatível com modelos de previsão temporal
+
+### Etapas realizadas com os dados:
+1. Seleção do dataset mais adequado para previsão
+2. Upload do arquivo CSV no SageMaker Canvas
+3. Validação automática de tipos de dados
+4. Análise exploratória inicial via interface do Canvas
 
 ---
 
 ## ⚙️ Construção e Treinamento do Modelo
-No SageMaker Canvas, foram realizadas as seguintes etapas:
 
-1. Importação do dataset selecionado
-2. Definição da variável alvo (estoque/demanda)
-3. Configuração automática das variáveis de entrada
-4. Treinamento do modelo utilizando os recursos no-code do Canvas
+O processo de criação do modelo seguiu as etapas abaixo dentro do SageMaker Canvas:
 
-O treinamento foi executado automaticamente pela plataforma, que também realizou a validação do modelo.
+1. **Importação do Dataset**
+   - Upload direto via interface
+   - Verificação automática de inconsistências
 
----
+2. **Definição da Variável Alvo**
+   - Seleção da coluna relacionada ao estoque/demanda como target
 
-## 📊 Análise de Resultados
-Após o treinamento, o SageMaker Canvas apresentou métricas de desempenho do modelo, permitindo:
+3. **Configuração das Variáveis de Entrada**
+   - Identificação automática das features relevantes
+   - Tratamento interno de dados categóricos e numéricos
 
-- Avaliação da precisão das previsões
-- Identificação das variáveis mais relevantes
-- Análise do impacto dos dados históricos nas previsões
+4. **Treinamento do Modelo**
+   - Utilização do mecanismo automático do Canvas
+   - Avaliação baseada em métricas internas da AWS
 
-Essas informações auxiliam na tomada de decisão e no ajuste de estratégias de estoque.
-
----
-
-## 🔮 Previsão de Estoque
-Com o modelo treinado, foram realizadas previsões de estoque para cenários futuros.  
-Os resultados obtidos permitem estimar demandas e auxiliar no planejamento e controle de inventário.
+O SageMaker Canvas executa automaticamente a divisão entre dados de treino e validação, garantindo maior confiabilidade nos resultados.
 
 ---
 
-## 🧠 Conclusão
-O SageMaker Canvas mostrou-se uma ferramenta poderosa para criação de modelos de Machine Learning sem código, facilitando o acesso à inteligência artificial mesmo para usuários sem experiência em programação.
+## 📊 Análise de Performance do Modelo
+Após o treinamento, foram analisados os seguintes aspectos:
 
-Este projeto reforça conceitos importantes de:
-- Machine Learning aplicado a negócios
-- Análise preditiva
-- Documentação técnica de projetos
+- Métricas de desempenho apresentadas pelo Canvas
+- Relevância das variáveis para o modelo
+- Capacidade de generalização das previsões
+- Comportamento do modelo frente a dados históricos
+
+Essas análises permitem entender **como e por que o modelo gera determinadas previsões**, indo além do simples resultado numérico.
+
+---
+
+## 🔮 Exemplos de Avaliações e Previsões Realizadas
+
+Com o modelo treinado, foi possível avaliar diferentes cenários de negócio. Abaixo estão **5 exemplos práticos de análises realizadas**:
+
+### 1️⃣ Previsão de Demanda Futura
+O modelo foi utilizado para prever a demanda de produtos em períodos futuros, auxiliando no planejamento antecipado de reposição de estoque.
+
+### 2️⃣ Identificação de Picos de Consumo
+A análise permitiu identificar períodos com maior volume de saída de produtos, indicando sazonalidade ou aumento pontual de demanda.
+
+### 3️⃣ Risco de Ruptura de Estoque
+Com base nas previsões, foi possível identificar cenários onde o estoque projetado não seria suficiente para atender a demanda futura.
+
+### 4️⃣ Excesso de Estoque
+O modelo também indicou situações onde a reposição poderia gerar acúmulo excessivo, ajudando a evitar custos desnecessários de armazenamento.
+
+### 5️⃣ Impacto de Variáveis no Resultado
+A análise das features revelou quais variáveis mais influenciam a previsão de estoque, como histórico de vendas e variações temporais.
+
+---
+
+## 🧠 Insights Obtidos
+- Modelos preditivos são ferramentas estratégicas para gestão de estoque
+- O SageMaker Canvas reduz significativamente a barreira técnica para uso de ML
+- A análise correta das previsões é tão importante quanto o modelo em si
+- Previsões bem interpretadas podem gerar economia e eficiência operacional
+
+---
+
+## ✅ Conclusão
+Este projeto demonstrou, de forma prática, como é possível aplicar Machine Learning em problemas reais de negócio utilizando ferramentas no-code.
+
+O Amazon SageMaker Canvas mostrou-se uma solução eficiente para:
+- Criação rápida de modelos preditivos
+- Análise de dados sem programação
+- Apoio à tomada de decisão baseada em dados
+
+Este projeto contribui para o desenvolvimento de competências em **Data Analysis**, **Machine Learning aplicado a negócios** e **documentação técnica**, sendo uma adição relevante ao portfólio profissional.
 
 ---
 
